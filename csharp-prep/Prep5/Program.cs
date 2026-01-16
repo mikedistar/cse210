@@ -23,11 +23,11 @@ class Program
             return number;
         }
 
-        static int PromtUserBirthYear()
+        static void PromtUserBirthYear(out int year)
         {
             Console.Write("Which year were you born? ");
-            int year = int.Parse(Console.ReadLine());
-            return year;
+            year = int.Parse(Console.ReadLine());
+
         }
 
         static int SquareNumber(int number)
@@ -50,7 +50,7 @@ class Program
         string name = PromptUserName();
         int number = PromptUserNumber();
         int squared_number = SquareNumber(number);
-        year = PromtUserBirthYear();
+        PromtUserBirthYear(out year);
         DisplayResult(name, squared_number, year);
         
 
