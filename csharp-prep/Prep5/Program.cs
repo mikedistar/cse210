@@ -36,13 +36,11 @@ class Program
             return squared_number;
         }
 
-        static int DisplayResult(string name, int squared_number, int year)
+        static void DisplayResult(string name, int squared_number, int year)
         {
             int current_year = 2026;
             Console.WriteLine($"{name}, the square of your number is {squared_number}");
             Console.WriteLine($"{name}, you will turn {current_year - year}");
-
-            return 3;
         }
 
         int year;
