@@ -1,9 +1,13 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+
+        string _userInput;
+        Console.WriteLine("Press ENTER or type 'quit' to exit.");
+        _userInput = Console.ReadLine();
     }
 }
