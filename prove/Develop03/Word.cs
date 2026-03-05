@@ -5,6 +5,12 @@ class World
     private int _shown;
 
     private int _hidden;
+
+    public World()
+    {
+        
+    }
+
 public void hideWord()
     {
         
