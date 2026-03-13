@@ -1,3 +1,5 @@
+using RandomJournal;
+
 class Journal
 
 {
@@ -26,12 +28,36 @@ class Journal
 
     public void SaveEntries()
     {
-        
+         Console.Write("Type the name of the file you want to save: ");
+        string filename = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach(Entry entry in list_of_entries)
+            {
+            outputFile.WriteLine($"{entry.prompt}, {entry.entry}, {entry.date}");
+            }
+        }
     }
 
     public void LoadEntries()
     {
-        
+        Console.Write("Type the name of the file you want to save: ");
+        string filename = Console.ReadLine();
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+            string[] _parts = line.Split(", ");
+            Entry newEntry = new Entry
+            {
+                prompt = _parts[0],
+                entry = _parts[1],
+                date = DateTime.Parse(_parts[2])
+
+            };
+            list_of_entries.Add(newEntry);        
+            }
     }
 
     

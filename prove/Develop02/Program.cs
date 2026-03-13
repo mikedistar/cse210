@@ -15,9 +15,6 @@ class Program
     static void Main(string[] args)
     {
 
-        
-        Console.WriteLine("Hello Develop02 World!");
-
         PromptGenerator prompt = new PromptGenerator();
         Journal journal = new Journal();
 
@@ -44,15 +41,19 @@ class Program
                 break;
                 
                 case 3:
+                journal.LoadEntries();
                 break;
                 
                 case 4:
+                journal.SaveEntries();
                 break;
                 
                 case 5:
+                Console.WriteLine("Have a wonderful day!");
                 break;
 
                 default:
+                Console.WriteLine("Wrong input, please choose an actual option.");
                 break;
             }
             

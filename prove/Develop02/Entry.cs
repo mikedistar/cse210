@@ -6,6 +6,8 @@ class Entry
 
     public string prompt;
 
+    
+
     public string entries()
     {
         return $"{prompt}\n {entry} \n {date}";
