@@ -4,23 +4,23 @@ class Journal
 
 {
 
-    List<Entry> list_of_entries = new List<Entry>(); 
+    List<Entry> _list_of_entries = new List<Entry>(); 
 
     public void WriteReadEntry(string entry, string prompt)
     {
         Entry entry1 = new Entry();
 
-        entry1.entry = entry;
+        entry1._entry = entry;
 
-        entry1.prompt = prompt;
+        entry1._prompt = prompt;
 
-        list_of_entries.Add(entry1);
+        _list_of_entries.Add(entry1);
         
     }
 
     public void DisplayCurrentEntires()
     {
-        foreach (Entry entry1 in list_of_entries)
+        foreach (Entry entry1 in _list_of_entries)
         {
             Console.WriteLine($"\n{entry1.entries()}\n");
         }
@@ -33,9 +33,9 @@ class Journal
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            foreach(Entry entry in list_of_entries)
+            foreach(Entry entry in _list_of_entries)
             {
-            outputFile.WriteLine($"{entry.prompt}, {entry.entry}, {entry.date}");
+            outputFile.WriteLine($"{entry._prompt}, {entry._entry}, {entry._date}");
             }
         }
     }
@@ -51,12 +51,12 @@ class Journal
             string[] _parts = line.Split(", ");
             Entry newEntry = new Entry
             {
-                prompt = _parts[0],
-                entry = _parts[1],
-                date = DateTime.Parse(_parts[2])
+                _prompt = _parts[0],
+                _entry = _parts[1],
+                _date = DateTime.Parse(_parts[2])
 
             };
-            list_of_entries.Add(newEntry);        
+            _list_of_entries.Add(newEntry);        
             }
     }
 
