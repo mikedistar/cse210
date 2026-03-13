@@ -5,31 +5,39 @@ class Scripture
 
     private string _text;
 
-    private List<string>_words;
-
-    public Scripture()
-    {
-        
-    }
-
-
-public void pickRandomScripture()
- {
+    private List<Word> _words;
     
- }
-public void getVerse()
+
+    public Scripture(string reference, string text)
+    {
+        _reference = reference;
+        _text = text;
+                foreach(string word in _text.Split(' '))
+        {
+            Word word1 = new Word(word);
+            _words.Add(word1);
+        }
+    }
+
+
+public string GetText()
+    {
+        return _text;
+    }
+public void SetText(string text)
+    {
+        _text = text;
+    }
+public void HideWords()
     {
         
-    }
-public void setVerse()
-    {
+
+
+        Console.Clear();
+
         
     }
-public void hideWords()
-    {
-        
-    }
-public void checkIfAllIsHidden()
+public void CheckIfAllIsHidden()
     {
         
     }

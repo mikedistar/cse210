@@ -10,4 +10,9 @@ class Program
         Console.WriteLine("Press ENTER or type 'quit' to exit.");
         _userInput = Console.ReadLine();
     }
+
+    public Scripture PickRandomScripture()
+ {
+    
+ }
 }

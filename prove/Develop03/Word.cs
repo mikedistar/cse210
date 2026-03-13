@@ -1,26 +1,36 @@
-class World
+class Word
 {
     private string _word;
 
-    private int _shown;
+    private bool _isHidden;
 
-    private int _hidden;
-
-    public World()
+    public Word(string word, bool isHidden = false)
     {
-        
+        _word = word;
+
+        _isHidden = isHidden;
     }
 
-public void hideWord()
+public void HideWord()
     {
-        
+        _isHidden = true;
     }
-public void getText()
+
+public void ShownWord()
     {
-        
+        _isHidden = false;
+    } 
+
+public bool GetIsHidden()
+    {
+        return _isHidden;
+    } 
+public string RenderText()
+    {
+        if(_isHidden)
+    {
+        return new string('_', _word.Length);
     }
-public void renderText()
-    {
-        
+        return _word;
     }
 }

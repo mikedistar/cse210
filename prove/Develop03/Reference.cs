@@ -1,27 +1,30 @@
+using System.Data;
+using System.Security.Cryptography;
+
 class Reference
 {
-
-private string _book;
-private string _chapter;
-private string _verses;
-private string _verse;
 private string _reference;
 
-public Reference()
+public Reference(string book, int chapter, int verse)
     {
- _book = "Moroni"; 
- _chapter = "10";
- _verses = "By the power of the Holy Ghost, ye may know the truth of all things.";
- _verse = "5";
-
- _reference = $"{_book} {_chapter}: {_verse}\n { _verses}";
+  _reference = $"{book} {chapter}: {verse}";
     }
-public string getReference()
+
+public Reference(string book, int chapter, int start_verse, int end_verse)
+    {
+        _reference = $"{book} {chapter}: {start_verse}-{end_verse}";
+    }
+public string GetReference()
     {
         return _reference;
     }
-public void setReference(string reference)
+public void SetReference(string book, int chapter, int verse)
     {
-        reference = _reference;
+        _reference = $"{book} {chapter}: {verse}";
+    }
+
+public void SetReference(string book, int chapter, int start_verse, int end_verse)
+    {
+        _reference = $"{book} {chapter}: {start_verse}-{end_verse}";
     }
 }
