@@ -9,7 +9,7 @@ namespace RandomJournal
             "How did I see the hand of the Lord in my life today? ",
             "What was the best part of my day? ",
             "What was the strongest emotion I felt today? ",
-            "If I had one thing I could do over today... what would it be? ",
+            "If I had one thing I could do over today, what would it be? ",
             "What was my biggest accomplishment? ",
             "What was the most delicious thing I ate today? ",
             "What was the hardest thing you did today? "

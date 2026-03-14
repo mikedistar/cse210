@@ -1,15 +1,15 @@
 class Entry
 {
-    public DateTime date=DateTime.Now;
+    public DateTime _date=DateTime.Now;
 
-    public string entry;
+    public string _entry;
 
-    public string prompt;
+    public string _prompt;
 
-    
+
 
     public string entries()
     {
-        return $"{prompt}\n {entry} \n {date}";
+        return $"{_prompt}\n {_entry} \n {_date}";
     }
 }

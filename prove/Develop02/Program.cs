@@ -22,46 +22,46 @@ class Program
 
         while (choice != 5)
         {
-        switch (choice)
+            switch (choice)
             {
                 case 1:
-                string inspire = prompt.GeneratePrompt();
-                Console.WriteLine($"{inspire}");
+                    string inspire = prompt.GeneratePrompt();
+                    Console.WriteLine($"{inspire}");
 
-                string response = Console.ReadLine();
+                    string response = Console.ReadLine();
 
-                journal.WriteReadEntry(response, inspire);
+                    journal.WriteReadEntry(response, inspire);
 
-                break;
+                    break;
 
                 case 2:
 
-                journal.DisplayCurrentEntires();
+                    journal.DisplayCurrentEntires();
 
-                break;
-                
+                    break;
+
                 case 3:
-                journal.LoadEntries();
-                break;
-                
+                    journal.LoadEntries();
+                    break;
+
                 case 4:
-                journal.SaveEntries();
-                break;
-                
+                    journal.SaveEntries();
+                    break;
+
                 case 5:
-                Console.WriteLine("Have a wonderful day!");
-                break;
+                    Console.WriteLine("Have a wonderful day!");
+                    break;
 
                 default:
-                Console.WriteLine("Wrong input, please choose an actual option.");
-                break;
+                    Console.WriteLine("Wrong input, please choose an actual option.");
+                    break;
             }
-            
 
-        choice = Menu();
+
+            choice = Menu();
         }
-        
-        
+
+
     }
 
     static int Menu()

@@ -1,18 +1,18 @@
 class Scripture
 {
 
-    private string _reference;
+    private Reference _reference;
 
     private string _text;
 
     private List<Word> _words;
-    
 
-    public Scripture(string reference, string text)
+
+    public Scripture(Reference reference, string text)
     {
         _reference = reference;
         _text = text;
-                foreach(string word in _text.Split(' '))
+        foreach (string word in _text.Split(' '))
         {
             Word word1 = new Word(word);
             _words.Add(word1);
@@ -20,25 +20,25 @@ class Scripture
     }
 
 
-public string GetText()
+    public string GetText()
     {
         return _text;
     }
-public void SetText(string text)
+    public void SetText(string text)
     {
         _text = text;
     }
-public void HideWords()
+    public void HideWords()
     {
-        
+
 
 
         Console.Clear();
 
-        
+
     }
-public void CheckIfAllIsHidden()
+    public void CheckIfAllIsHidden()
     {
-        
+
     }
 }

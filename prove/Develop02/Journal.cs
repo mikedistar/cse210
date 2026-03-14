@@ -35,7 +35,7 @@ class Journal
         {
             foreach(Entry entry in _list_of_entries)
             {
-            outputFile.WriteLine($"{entry._prompt}, {entry._entry}, {entry._date}");
+            outputFile.WriteLine($"{entry._prompt} * {entry._entry} * {entry._date}");
             }
         }
     }
@@ -48,7 +48,7 @@ class Journal
 
         foreach (string line in lines)
         {
-            string[] _parts = line.Split(", ");
+            string[] _parts = line.Split(" * ");
             Entry newEntry = new Entry
             {
                 _prompt = _parts[0],
