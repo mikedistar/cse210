@@ -1,3 +1,6 @@
+// Made by Michael Starling
+// As something to exceed base requirements, I added a NegativeGoal class which subtracts points from the current score every time the user does it.
+
 using System.IO;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
