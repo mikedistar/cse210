@@ -1,3 +1,7 @@
+// Made by Michael Starling
+// I added a list of different scriptures and added the capability for the program to pick a random scripture,
+// which is not part of the base requirements.
+
 using System;
 using System.Runtime.CompilerServices;
 
